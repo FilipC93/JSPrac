@@ -4,7 +4,7 @@ import numpy as np
 np.random.seed(11)
 random_walk = [0]
 
-for x in range(25):
+for x in range(100):
     step = random_walk[-1]
     dice = np.random.randint(1, 7)
 
