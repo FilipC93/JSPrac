@@ -46,7 +46,7 @@ class App extends React.Component {
           {
             quote && (
               <div className="mb-4">
-                <h5 id="text" class="text-large">
+                <h5 id="text" className="text-large">
                   <i className="fas fa-2x fa-quote-left"></i>
                   {quote.quote}
                 </h5>
