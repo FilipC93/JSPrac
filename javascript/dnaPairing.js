@@ -1,8 +1,8 @@
-function pairElement(char) {
-//Return each strand as an array of two elements, the original and the paired one.
-    var paired = [];
-//Function to check with strand to pair.
-    var search = function (char) {
+function pairElement(str) {
+    //Return each strand as an array of two elements, the original and the paired one.
+    let paired = [];
+    //Function to check with strand to pair.
+    let search = (char) => {
         switch (char) {
             case "A":
                 paired.push(["A", "T"]);
@@ -18,8 +18,8 @@ function pairElement(char) {
                 break;
         }
     };
-//Loops through the input and pair.
-    for (var i = 0; i < str.length; i++) {
+    //Loops through the input and pair.
+    for (let i = 0; i < str.length; i++) {
         search(str[i]);
     }
     return paired;
