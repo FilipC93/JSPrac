@@ -4,4 +4,4 @@ return str
 .reverse()
 .join("");
 }
-reversedString("Filip");
+console.log(reversedString("Filip")); //?This command will return 'piliF'
