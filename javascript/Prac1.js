@@ -1,8 +1,5 @@
 var names = ["Philippe", "Phil", "Filip"]
 
-const first = 1;
-const second = PEPEGA;
-
 function variations(first, second) {
     if (first == 1) {
         return names[0];
@@ -12,5 +9,10 @@ function variations(first, second) {
     return second;
 }
 
-variations(4, 0)
-console.log(variations)
+console.log(variations(4, 0))
+
+function algo(x, y) {
+    return x + y;
+}
+
+console.log(`The answer is ${algo(3, 5)}`);
