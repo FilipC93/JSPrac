@@ -13,7 +13,7 @@ function stringRecursion(input) {
     if(input.length <= 1) {
         return input;
     }else {
-        return input.split('').reverse().join('')
+        return input.split('').reverse().join('');
     }
 }
 
