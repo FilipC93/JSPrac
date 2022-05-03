@@ -1,0 +1,9 @@
+//TODO: Docs of node (most important ones):
+//*File system : https://nodejs.org/dist/latest-v16.x/docs/api/fs.html
+//*HTTP: https://nodejs.org/dist/latest-v16.x/docs/api/http.html
+//*Operating system (OS) : https://nodejs.org/dist/latest-v16.x/docs/api/os.html
+//*Path : https://nodejs.org/dist/latest-v16.x/docs/api/path.html
+//*Process : https://nodejs.org/dist/latest-v16.x/docs/api/process.html
+//*Query String : https://nodejs.org/dist/latest-v16.x/docs/api/querystring.html
+//*Stream : https://nodejs.org/dist/latest-v16.x/docs/api/stream.html
+//*Events : https://nodejs.org/dist/latest-v16.x/docs/api/events.html
