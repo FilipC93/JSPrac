@@ -10,9 +10,9 @@ console.log(recursionSum(105)); //? This will add the num again and again but it
 
 
 function stringRecursion(input) {
-    if(input.length <= 1) {
+    if (input.length <= 1) {
         return input;
-    }else {
+    } else {
         return input.split('').reverse().join('');
     }
 }
