@@ -1,0 +1,12 @@
+//? Library API:
+//* BaseURI: http://216.10.245.166
+//* Resource: Library/Addbook.php
+//! Method: POST
+
+//* Input Payload: JSON:
+{
+    "name": "Learn Appium Automation with Java",
+    "isbn": "bcd",
+    "aisle": "227",
+    "author": "John foe"
+}
