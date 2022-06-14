@@ -1,0 +1,13 @@
+{
+    "fields": {
+        "project": {
+            "key": "RES" //! Name of JIRA project we added.
+        },
+        "summary": "Credit Card defect",
+        "description": "Creating my first bug",
+        "issuetype": {
+            "name": "Bug"
+        }
+    }
+}
+//? Worked finally.
