@@ -4,6 +4,6 @@
 
 My name is Filip Cekani and I was born on 13/1/1993.
 
-I started developing from the summer of 2020, and I'm trying to make it as a Front-End Developer.
+:computer: I started developing from the summer of 2020, and I'm a junior Front-End Developer.
 
-#### Oh, and I also have a degree in Business Administration.
+#### :mortar_board: Oh, and I also have a degree in Business Administration.
