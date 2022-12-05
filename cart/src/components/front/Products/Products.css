@@ -40,7 +40,7 @@
     line-height: 20px;
 }
 
-.product-button {
+#product-button {
     font-weight: 700;
     font-size: 18px;
     border-radius: 5px;
@@ -54,6 +54,10 @@
     cursor: pointer;
 }
 
-.product-button:hover {
+#product-button:hover {
     background-color: rebeccapurple;
+}
+
+#product-button:active {
+    transform: translateY(1px);
 }

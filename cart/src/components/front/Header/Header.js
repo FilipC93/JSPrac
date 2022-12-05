@@ -1,37 +1,38 @@
 import React from "react";
+import { Box, ListItem, Text, UnorderedList } from "@chakra-ui/react";
 import './Header.css';
 import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-        <header className="header">
-            <div>
-                <h1>
+        <Box className="header">
+            <Box>
+                <Text as={'h1'}>
                     <Link to="/" className="logo">
                         Electronics
                     </Link>
-                </h1>
-            </div>
-            <div className="header-links">
-                <ul>
-                    <li>
+                </Text>
+            </Box>
+            <Box className="header-links">
+                <UnorderedList>
+                    <ListItem>
                         <Link to="/">Home</Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
+                    </ListItem>
+                </UnorderedList>
+                <UnorderedList>
+                    <ListItem>
                         <Link to="/login">Log In</Link>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
+                    </ListItem>
+                </UnorderedList>
+                <UnorderedList>
+                    <ListItem>
                         <Link to="/cart" className="cart">
                             <i className="fas fa-shopping-cart" />
                         </Link>
-                    </li>
-                </ul>
-            </div>
-        </header>
+                    </ListItem>
+                </UnorderedList>
+            </Box>
+        </Box>
     )
 }
 
