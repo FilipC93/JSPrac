@@ -5,7 +5,7 @@ export const handlers = [
         //TODO: Look DOCS
         ctx.json([
             { name: 'Choco', image: 'whatever/choco'},
-            {name: 'Vanilla', image: 'whatver/vanilla'}
+            {name: 'Vanilla', image: 'whatever/vanilla'}
         ])
     }),
 ];
