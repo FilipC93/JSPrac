@@ -9,6 +9,7 @@ rgbSample = [255, 43, 10];
 type User = [number, string];
 const newUser: User = [1939, 'exampler@example.com'];
 newUser[1] = 'fc';
+
 //? This is not working anymore.
 //* newUser.push(true);
 export { }
