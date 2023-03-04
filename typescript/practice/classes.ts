@@ -5,7 +5,7 @@ class User {
         this.email = email;
         this.name = name;
     }
-    private deleteToken() {
+    private deleteToken(): string {
         return 'Token deleted';
     }
     get getGmail(): string {
