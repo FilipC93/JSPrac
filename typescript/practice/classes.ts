@@ -1,5 +1,5 @@
 class User {
-    private _courseCount = 1;
+    protected _courseCount = 1;
     private readonly city?: string = 'Los Angeles'; //? Can use the # for private as well.
     constructor(public email: string, public name: string) {
         this.email = email;
@@ -20,6 +20,14 @@ class User {
         }
         this._courseCount = courseNum;
     };
+}
+
+export class PremiumUser extends User {
+    //? Inherits all the properties except the private ones.
+    isPremium: boolean = true;
+    changeCourseCount() {
+        this._courseCount = 150;
+    }
 }
 
 export const chad = new User('chad@example.com', 'chad');
