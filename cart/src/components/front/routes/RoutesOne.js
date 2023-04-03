@@ -8,9 +8,9 @@ const RoutesOne = ({ productItems, cartQuantity }) => {
     return (
         <div>
             <Routes>
-                <Route path="/" exact element={<Products productItems={productItems} />}></Route>
-                <Route path="/login" exact element={<Login />}></Route>
-                <Route path="/cart" exact element={<Cart cartQuantity={cartQuantity} />}></Route>
+                <Route path="/" exact element={<Products productItems={productItems} />} />
+                <Route path="/login" exact element={<Login />} />
+                <Route path="/cart" exact element={<Cart cartQuantity={cartQuantity} />} />
             </Routes>
         </div>
     );

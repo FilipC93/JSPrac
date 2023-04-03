@@ -4,15 +4,17 @@ import './Products.css'
 
 const Products = ({ productItems }) => {
     const [cartToggle, setCartToggle] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState();
 
-    const handleCartToggle = () => {
+    const handleCartToggle = value => {
         cartToggle ? setCartToggle(false) : setCartToggle(true)
+        setSelectedIndex(value)
     }
 
     return (
         <Box className="products">
-            {productItems.map(productItem => (
-                <Box className="card">
+            {productItems.map((productItem, index) => (
+                <Box className="card" key={index}>
                     <Image className="product-image"
                         src={productItem.image}
                         alt={productItem.name}
@@ -22,8 +24,8 @@ const Products = ({ productItems }) => {
                     </Box>
                     <Box className="product-price">{productItem.price}€</Box>
                     <Box>
-                        <Button id="product-button" onClick={handleCartToggle}>
-                            {cartToggle ? 'Added to Cart' : 'Add to Cart'}
+                        <Button id="product-button" onClick={() => handleCartToggle(index)}>
+                            {cartToggle && selectedIndex === index ? 'Added to Cart' : 'Add to Cart'}
                         </Button>
                     </Box>
                 </Box>
