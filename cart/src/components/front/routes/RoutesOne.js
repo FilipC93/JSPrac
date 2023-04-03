@@ -3,16 +3,17 @@ import Products from "../Products/Products";
 import { Route, Routes } from "react-router-dom";
 import Login from "../Login/Login";
 import Cart from "../Cart/Cart";
+import { Box } from "@chakra-ui/react";
 
-const RoutesOne = ({ productItems, cartQuantity }) => {
+const RoutesOne = ({ productItems }) => {
     return (
-        <div>
+        <Box>
             <Routes>
                 <Route path="/" exact element={<Products productItems={productItems} />} />
                 <Route path="/login" exact element={<Login />} />
-                <Route path="/cart" exact element={<Cart cartQuantity={cartQuantity} />} />
+                <Route path="/cart" exact element={<Cart cartQuantity={productItems} />} />
             </Routes>
-        </div>
+        </Box>
     );
 };
 

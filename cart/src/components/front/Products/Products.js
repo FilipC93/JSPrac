@@ -23,11 +23,14 @@ const Products = ({ productItems }) => {
                         <Text as={'h3'} className="product-name">{productItem.name}</Text>
                     </Box>
                     <Box className="product-price">{productItem.price}€</Box>
-                    <Box>
-                        <Button id="product-button" onClick={() => handleCartToggle(index)}>
+                    <Button
+                        id={cartToggle && selectedIndex === index ?
+                            "product-button-added" : "product-button"}
+                        onClick={() => handleCartToggle(index)}>
+                        <Text>
                             {cartToggle && selectedIndex === index ? 'Added to Cart' : 'Add to Cart'}
-                        </Button>
-                    </Box>
+                        </Text>
+                    </Button>
                 </Box>
             ))}
         </Box>
