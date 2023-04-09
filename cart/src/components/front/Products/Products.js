@@ -3,13 +3,11 @@ import { Box, Text, Button, Image } from "@chakra-ui/react";
 import './Products.css'
 
 const Products = ({ productItems }) => {
-    const [cartToggle, setCartToggle] = useState(false);
-    const [selectedIndex, setSelectedIndex] = useState();
-
+    const [addToCart, setAddToCart] = useState([]);
     const handleCartToggle = value => {
-        cartToggle ? setCartToggle(false) : setCartToggle(true)
-        setSelectedIndex(value)
-    }
+        let updatedCart = [...addToCart, value];
+        setAddToCart(updatedCart);
+    };
 
     return (
         <Box className="products">
@@ -24,11 +22,11 @@ const Products = ({ productItems }) => {
                     </Box>
                     <Box className="product-price">{productItem.price}€</Box>
                     <Button
-                        id={cartToggle && selectedIndex === index ?
+                        id={addToCart.includes(index) ?
                             "product-button-added" : "product-button"}
                         onClick={() => handleCartToggle(index)}>
                         <Text>
-                            {cartToggle && selectedIndex === index ? 'Added to Cart' : 'Add to Cart'}
+                            {addToCart.includes(index) ? 'Added to Cart' : 'Add to Cart'}
                         </Text>
                     </Button>
                 </Box>
