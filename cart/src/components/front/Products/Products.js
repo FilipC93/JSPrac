@@ -5,7 +5,12 @@ import './Products.css'
 const Products = ({ productItems }) => {
     const [addToCart, setAddToCart] = useState([]);
     const handleCartToggle = value => {
-        let updatedCart = [...addToCart, value];
+        let updatedCart = [];
+        if (addToCart.includes(value)) {
+            updatedCart = addToCart.filter(item => item !== value)
+        } else {
+            updatedCart = [...addToCart, value];
+        }
         setAddToCart(updatedCart);
     };
 
