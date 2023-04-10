@@ -1,23 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import './Products.css'
 
-const Products = ({ productItems }) => {
-    const [addToCart, setAddToCart] = useState([]);
-    const handleCartToggle = value => {
-        let updatedCart = [];
-        if (addToCart.includes(value)) {
-            updatedCart = addToCart.filter(item => item !== value)
-        } else {
-            updatedCart = [...addToCart, value];
-        }
-        setAddToCart(updatedCart);
-    };
-
+const Products = ({ productItems, items, handleCartToggle }) => {
     return (
         <Box className="products">
             {productItems.map((productItem, index) => {
-                const isAddedToCart = addToCart.includes(index);
+                const isAddedToCart = items.includes(index);
                 return (
                     <Box className="card" key={index}>
                         <Image className="product-image"
