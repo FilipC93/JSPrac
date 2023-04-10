@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Products from "../Products/Products";
 import { Route, Routes } from "react-router-dom";
 import Login from "../Login/Login";
@@ -13,11 +13,14 @@ const RoutesOne = ({ productItems }) => {
         if (addToCart.includes(value)) {
             updatedCart = addToCart.filter(item => item !== value)
         } else {
-            updatedCart = [...addToCart, value];
+            updatedCart = [...addToCart, {
+                image: productItems[value].image,
+                name: productItems[value].name
+            }];
         }
         setAddToCart(updatedCart);
     };
-
+    console.log(addToCart);
     return (
         <Box>
             <Routes>
