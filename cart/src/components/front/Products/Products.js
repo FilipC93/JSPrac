@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import './Products.css'
 
-const Products = ({ productItems, items, handleCartToggle }) => {
+const Products = ({ productItems, handleCartToggle }) => {
     return (
         <Box className="products">
             {productItems.map((productItem, index) => {
@@ -16,14 +16,15 @@ const Products = ({ productItems, items, handleCartToggle }) => {
                             <Text as={'h3'} className="product-name">{productItem.name}</Text>
                         </Box>
                         <Box className="product-price">{productItem.price}€</Box>
-                        <Button
-                            id={productItem.isAdded ?
-                                "product-button-added" : "product-button"}
-                            onClick={() => handleCartToggle(index)}>
-                            <Text>
-                                {productItem.isAdded ? 'Added to Cart' : 'Add to Cart'}
-                            </Text>
-                        </Button>
+                        {productItem.isAdded ? (
+                            <Text id="product-added-label"><Text as={'span'} id="tick-icon">&#10003;</Text> Added to cart</Text>
+                        ) : (
+                            <Button id="product-button" onClick={() => handleCartToggle(index)}>
+                                <Text>
+                                    Add to Cart
+                                </Text>
+                            </Button>
+                        )}
                     </Box>
                 );
             })}

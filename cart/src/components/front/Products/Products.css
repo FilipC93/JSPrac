@@ -54,6 +54,13 @@
     cursor: pointer;
 }
 
+#product-added-label {
+    color: rgb(77, 73, 73);
+    font-weight: 450;
+    font-size: 14px;
+    text-align: center;
+}
+
 #product-button-added {
     font-weight: 700;
     font-size: 18px;
@@ -74,4 +81,9 @@
 
 #product-button:active {
     transform: translateY(1px);
+}
+
+#tick-icon {
+    color: green;
+    font-weight: bolder;
 }
