@@ -6,7 +6,7 @@ import Cart from "../Cart/Cart";
 import { Box } from "@chakra-ui/react";
 
 const RoutesOne = ({ productItems }) => {
-    const [addToCart, setAddToCart] = useState([])
+    const [addToCart, setAddToCart] = useState([]);
 
     const handleCartToggle = value => {
         let updatedCart = [];
@@ -15,19 +15,19 @@ const RoutesOne = ({ productItems }) => {
         } else {
             updatedCart = [...addToCart, {
                 image: productItems[value].image,
-                name: productItems[value].name
+                name: productItems[value].name,
+                isAdded: productItems[value].isAdded = true
             }];
         }
         setAddToCart(updatedCart);
     };
-    console.log(addToCart);
     return (
         <Box>
             <Routes>
                 <Route path="/"
                     exact element={
-                        <Products productItems={productItems}
-                            items={addToCart}
+                        <Products
+                            productItems={productItems}
                             handleCartToggle={handleCartToggle} />
                     } />
                 <Route path="/login" exact element={<Login />} />

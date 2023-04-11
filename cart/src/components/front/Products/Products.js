@@ -6,7 +6,6 @@ const Products = ({ productItems, items, handleCartToggle }) => {
     return (
         <Box className="products">
             {productItems.map((productItem, index) => {
-                const isAddedToCart = items.includes(index);
                 return (
                     <Box className="card" key={index}>
                         <Image className="product-image"
@@ -18,15 +17,15 @@ const Products = ({ productItems, items, handleCartToggle }) => {
                         </Box>
                         <Box className="product-price">{productItem.price}€</Box>
                         <Button
-                            id={isAddedToCart ?
+                            id={productItem.isAdded ?
                                 "product-button-added" : "product-button"}
                             onClick={() => handleCartToggle(index)}>
                             <Text>
-                                {isAddedToCart ? 'Added to Cart' : 'Add to Cart'}
+                                {productItem.isAdded ? 'Added to Cart' : 'Add to Cart'}
                             </Text>
                         </Button>
                     </Box>
-                )
+                );
             })}
         </Box>
     );

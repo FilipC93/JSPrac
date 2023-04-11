@@ -33,7 +33,7 @@ const Header = () => {
                 </UnorderedList>
             </Box>
         </Box>
-    )
+    );
 }
 
 export default Header;
