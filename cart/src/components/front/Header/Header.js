@@ -18,14 +18,10 @@ const Header = () => {
                     <ListItem>
                         <Link to="/">Home</Link>
                     </ListItem>
-                </UnorderedList>
-                <UnorderedList>
                     <ListItem>
                         <Link to="/login">Log In</Link>
                     </ListItem>
-                </UnorderedList>
-                <UnorderedList>
-                    <ListItem>
+                    <ListItem marginRight={'8px'}>
                         <Link to="/cart" className="cart">
                             <i className="fas fa-shopping-cart" />
                         </Link>

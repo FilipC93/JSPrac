@@ -1,3 +1,19 @@
-.cart {
-    background-color: #2C3E50;
+.cart-items {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.cart-items-header { 
+    margin-bottom: 32px;
+}
+
+.cart-items-image {
+    width: 120px;
+    height: 120px;
+}
+
+.cart-items-list {
+    flex-direction: column;
+    margin-bottom: 32px;
 }
