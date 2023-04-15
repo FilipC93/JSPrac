@@ -1,8 +1,9 @@
 import React from "react";
-import { Box, Flex, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Text } from '@chakra-ui/react'
 import './Cart.css'
 
 const Cart = ({ cartQuantity }) => {
+    //TODO: Add functionality to remove cartItem.
     return (
         <Flex className="cart-items">
             {cartQuantity?.length > 0 && (
@@ -17,16 +18,17 @@ const Cart = ({ cartQuantity }) => {
                     No items are added.
                 </Box>
             )}
-            <Box>
-                {cartQuantity?.map((item, index) => {
-                    return (
-                        <Flex key={index} className="cart-items-list">
+            {cartQuantity?.map((item, index) => {
+                return (
+                    <Flex key={index} className="cart-items-list">
+                        <Flex justifyContent={'center'}>
                             <Image className="cart-items-image" src={item.image} alt={item.name} />
-                            <Text>{item.name}</Text>
                         </Flex>
-                    )
-                })}
-            </Box>
+                        <Text textAlign={'center'}>{item.name}</Text>
+                        <Button id="cart-remove-button">Remove</Button>
+                    </Flex>
+                )
+            })}
         </Flex>
     );
 }
