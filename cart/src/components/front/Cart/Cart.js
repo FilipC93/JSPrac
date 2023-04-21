@@ -6,14 +6,13 @@ const Cart = ({ cartQuantity }) => {
     //TODO: Add functionality to remove cartItem.
     return (
         <Flex className="cart-items">
-            {cartQuantity?.length > 0 && (
+            {cartQuantity?.length > 0 ? (
                 <Flex className="cart-items-header">
                     <Flex>
                         Cart Items: {cartQuantity.length}
                     </Flex>
                 </Flex>
-            )}
-            {cartQuantity?.length === 0 && (
+            ) : (
                 <Box className="cart-items-empty">
                     No items are added.
                 </Box>
