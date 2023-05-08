@@ -17,7 +17,10 @@ const Products = ({ productItems, handleCartToggle }) => {
                         </Box>
                         <Box className="product-price">{productItem.price}€</Box>
                         {productItem.isAdded ? (
-                            <Text id="product-added-label"><Text as={'span'} id="tick-icon">&#10003;</Text> Added to cart</Text>
+                            <Text id="product-added-label">
+                                <Text as={'span'} id="tick-icon">&#10003;</Text>
+                                Added to cart
+                            </Text>
                         ) : (
                             <Button id="product-button" onClick={() => handleCartToggle(index)}>
                                 <Text>
