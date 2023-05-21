@@ -2,11 +2,11 @@ import React from "react";
 import { Box, Text, Button, Image } from "@chakra-ui/react";
 import './Products.css'
 
-const Products = ({ productItems, handleCartToggle }) => {
+const Products = ({ productItems, handleCart }) => {
     return (
         <Box className="products">
             {productItems.map((productItem, index) => {
-                const { image, name, price, isAdded } = productItem
+                const { image, name, price, isAdded } = productItem;
                 return (
                     <Box className="card" key={index}>
                         <Image className="product-image"
@@ -23,10 +23,8 @@ const Products = ({ productItems, handleCartToggle }) => {
                                 Added to cart
                             </Text>
                         ) : (
-                            <Button id="product-button" onClick={() => handleCartToggle(index)}>
-                                <Text>
-                                    Add to Cart
-                                </Text>
+                            <Button id="product-button" onClick={() => handleCart(index)}>
+                                <Text>Add to Cart</Text>
                             </Button>
                         )}
                     </Box>

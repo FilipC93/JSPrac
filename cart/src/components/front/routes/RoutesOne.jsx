@@ -6,13 +6,11 @@ import Cart from "../Cart/Cart";
 import { Box } from "@chakra-ui/react";
 
 const RoutesOne = ({ productItems }) => {
+    //TODO: Find solution for rerendering component with correct labels.
     const [addToCart, setAddToCart] = useState([]);
-
-    const handleCartToggle = value => {
+    const handleCart = value => {
         let updatedCart = [];
-        if (addToCart.includes(value)) {
-            updatedCart = addToCart.filter(item => item !== value)
-        } else {
+        if (!addToCart.includes(value)) {
             updatedCart = [...addToCart, {
                 image: productItems[value].image,
                 name: productItems[value].name,
@@ -21,6 +19,15 @@ const RoutesOne = ({ productItems }) => {
         }
         setAddToCart(updatedCart);
     };
+
+    const removeFromCart = index => {
+        const existingCart = [...addToCart];
+        const removedItem = existingCart[index];
+        removedItem.isAdded = false;
+        existingCart.splice(index, 1);
+        setAddToCart(existingCart);
+    };
+
     return (
         <Box>
             <Routes>
@@ -28,10 +35,13 @@ const RoutesOne = ({ productItems }) => {
                     exact element={
                         <Products
                             productItems={productItems}
-                            handleCartToggle={handleCartToggle} />
+                            handleCart={handleCart} />
                     } />
                 <Route path="/login" exact element={<Login />} />
-                <Route path="/cart" exact element={<Cart cartQuantity={addToCart} />} />
+                <Route path="/cart" exact element={<Cart
+                    cartQuantity={addToCart}
+                    removeFromCart={removeFromCart} />
+                } />
             </Routes>
         </Box>
     );

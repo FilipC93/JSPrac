@@ -2,8 +2,7 @@ import React from "react";
 import { Box, Button, Flex, Image, Text } from '@chakra-ui/react'
 import './Cart.css'
 
-const Cart = ({ cartQuantity }) => {
-    //TODO: Add functionality to remove cartItem.
+const Cart = ({ cartQuantity, removeFromCart }) => {
     return (
         <Flex className="cart-items">
             {cartQuantity?.length > 0 ? (
@@ -24,7 +23,9 @@ const Cart = ({ cartQuantity }) => {
                             <Image className="cart-items-image" src={item.image} alt={item.name} />
                         </Flex>
                         <Text textAlign={'center'}>{item.name}</Text>
-                        <Button id="cart-remove-button">Remove</Button>
+                        <Button id="cart-remove-button" onClick={() => removeFromCart(index)}>
+                            Remove
+                        </Button>
                     </Flex>
                 )
             })}
