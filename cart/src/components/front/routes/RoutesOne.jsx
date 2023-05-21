@@ -8,13 +8,13 @@ import { Box } from "@chakra-ui/react";
 const RoutesOne = ({ productItems }) => {
     //TODO: Find solution for rerendering component with correct labels.
     const [addToCart, setAddToCart] = useState([]);
-    const handleCart = value => {
+    const handleCart = index => {
         let updatedCart = [];
-        if (!addToCart.includes(value)) {
+        if (!addToCart.includes(index)) {
             updatedCart = [...addToCart, {
-                image: productItems[value].image,
-                name: productItems[value].name,
-                isAdded: productItems[value].isAdded = true
+                image: productItems[index].image,
+                name: productItems[index].name,
+                isAdded: productItems[index].isAdded = true
             }];
         }
         setAddToCart(updatedCart);
