@@ -38,10 +38,10 @@ const RoutesOne = ({ productItems }) => {
                             handleCart={handleCart} />
                     } />
                 <Route path="/login" exact element={<Login />} />
-                <Route path="/cart" exact element={<Cart
-                    cartQuantity={addToCart}
-                    removeFromCart={removeFromCart} />
-                } />
+                <Route path="/cart" exact element={
+                    <Cart cartQuantity={addToCart} removeFromCart={removeFromCart} />
+                }
+                />
             </Routes>
         </Box>
     );
